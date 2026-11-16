@@ -1,10 +1,10 @@
-# Atomic Coding Skill ⚛️
+# SLM Tiny Step 🐾
 
 [English](README.md) | [Tiếng Việt](README.vi.md)
 
-> **Deterministic Planning, Context Sharding & Micro-Step Memory for AI Agents (Optimized for SLMs like LFM-3, OpenCode, Codex, Antigravity, Claude Code, Cursor).**
+> **Deterministic Planning, Context Sharding & Micro-Step Memory for AI Agents (Optimized for Small Language Models like LFM-3, OpenCode, Codex, Antigravity, Claude Code, Cursor).**
 
-When coding with Small Language Models (SLMs) such as **LFM-3**, agents often experience **context drift**, **forgetting previous steps**, or **generating truncated/broken code**. `atomic-coding` eliminates this problem through strict, deterministic protocols:
+When coding with Small Language Models (SLMs) such as **LFM-3**, agents often experience **context drift**, **forgetting previous steps**, or **generating truncated/broken code**. `slm-tiny-step` eliminates this problem through strict, deterministic protocols:
 
 1. **No Code Without Plan:** Enforces planning before writing code if a task touches $\ge 2$ files or $>30$ LOC.
 2. **Context Sharding:** Keeps plans partitioned across lightweight physical markdown files (`.atomic/00_roadmap.md`, `01_phase.md`), keeping active context footprint $<300$ tokens at all times.
@@ -28,34 +28,34 @@ Upon running the command, an interactive menu appears in your terminal:
 
 ```text
    =====================================================
-                ATOMIC CODING SKILL INSTALLER           
+               SLM TINY STEP SKILL INSTALLER            
         Deterministic Planning & Micro-Step Memory      
    =====================================================
 
   Select installation scope:
 
-  [1] Global - Entire system (Available to all projects with @atomic-coding)
+  [1] Global - Entire system (Available to all projects with @slm-tiny-step)
   [2] Folder - Current directory (Installs .agents/skills for this project)
 
   Enter choice [1/2] (Default: 1): 
 ```
 
-- **[1] Global:** Installs into system config directories (`~/.gemini`, `~/.config/opencode`, `~/.claude`, `~/.codex`). Every project on your machine can invoke `@atomic-coding`.
-- **[2] Folder:** Installs into the current directory (`.agents/skills/atomic-coding` and `.agents/rules/`). Perfect for committing to Git to share with your team.
+- **[1] Global:** Installs into system config directories (`~/.gemini`, `~/.config/opencode`, `~/.claude`, `~/.codex`). Every project on your machine can invoke `@slm-tiny-step`.
+- **[2] Folder:** Installs into the current directory (`.agents/skills/slm-tiny-step` and `.agents/rules/`). Perfect for committing to Git to share with your team.
 
 *(You can bypass the prompt with flags: `npx github:TuilaTammmmm/slm-tiny-step global` or `npx github:TuilaTammmmm/slm-tiny-step folder`)*
 
 ---
 
-## 🎯 How to Invoke `@atomic-coding`
+## 🎯 How to Invoke `@slm-tiny-step`
 
 Once installed (Global or Folder), invoke the agent using any of the following methods:
 
 1. **Direct `@` mention in chat:**
-   > *"@atomic-coding refactor the user authentication flow"*
+   > *"@slm-tiny-step refactor the user authentication flow"*
 
 2. **Natural instruction:**
-   > *"Apply atomic-coding skill to implement the file upload feature"*
+   > *"Apply slm-tiny-step skill to implement the file upload feature"*
 
 ---
 
@@ -88,7 +88,7 @@ Once installed (Global or Folder), invoke the agent using any of the following m
 ## 📂 Repository Structure
 
 ```text
-atomic-coding/
+slm-tiny-step/
 ├── package.json              # npm package definition
 ├── bin/
 │   └── cli.js                # Universal Node.js installer (Zero external deps)

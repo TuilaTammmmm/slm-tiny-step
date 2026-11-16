@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Atomic Coding Skill - Universal Installer (Node.js CLI)
- * Supports: npx atomic-coding, pnpm dlx atomic-coding, bunx atomic-coding
+ * SLM Tiny Step Skill - Universal Installer (Node.js CLI)
+ * Supports: npx github:TuilaTammmmm/slm-tiny-step
  */
 
 import fs from 'node:fs';
@@ -25,7 +25,7 @@ const darkCyan = (text) => `\x1b[34m${text}\x1b[0m`;
 function printBanner() {
   console.log('');
   console.log(cyan('   ====================================================='));
-  console.log(cyan('                ATOMIC CODING SKILL INSTALLER           '));
+  console.log(cyan('               SLM TINY STEP SKILL INSTALLER            '));
   console.log(darkCyan('        Deterministic Planning & Micro-Step Memory      '));
   console.log(cyan('   ====================================================='));
   console.log('');
@@ -70,13 +70,13 @@ function registerRule(ruleFilePath) {
   if (!fs.existsSync(ruleDir)) {
     fs.mkdirSync(ruleDir, { recursive: true });
   }
-  const ruleContent = `# @atomic-coding Anchor Rule
-When the user mentions \`@atomic-coding\` or when working on tasks touching >=2 files or >30 lines:
-- Strictly follow \`.agents/skills/atomic-coding/SKILL.md\`.
+  const ruleContent = `# @slm-tiny-step Anchor Rule
+When the user mentions \`@slm-tiny-step\` or \`@atomic-coding\` or when working on tasks touching >=2 files or >30 lines:
+- Strictly follow \`.agents/skills/slm-tiny-step/SKILL.md\`.
 - Enforce the sharded \`.atomic/\` planning directory and 1 atomic micro-task per turn.
 `;
   fs.writeFileSync(ruleFilePath, ruleContent, 'utf8');
-  console.log(`   ${green('[+]')} Registered @atomic-coding trigger rule in: ${ruleFilePath}`);
+  console.log(`   ${green('[+]')} Registered @slm-tiny-step trigger rule in: ${ruleFilePath}`);
 }
 
 async function promptScope() {
@@ -85,7 +85,7 @@ async function promptScope() {
   if (arg === 'folder' || arg === 'local' || arg === 'f' || arg === 'l') return 'Folder';
 
   console.log(yellow('  Select installation scope:\n'));
-  console.log(white('  [1] Global - Entire system (Available to all projects with @atomic-coding)'));
+  console.log(white('  [1] Global - Entire system (Available to all projects with @slm-tiny-step)'));
   console.log(white('  [2] Folder - Current directory (Installs .agents/skills for this project)\n'));
 
   const rl = readline.createInterface({
@@ -116,34 +116,34 @@ async function run() {
     console.log(yellow('>> Installing in GLOBAL mode (Entire system)...'));
 
     // Antigravity Global
-    copySkillPackage(path.join(homeDir, '.gemini', 'config', 'skills', 'atomic-coding'));
-    copySkillPackage(path.join(homeDir, '.gemini', 'config', '.agents', 'skills', 'atomic-coding'));
+    copySkillPackage(path.join(homeDir, '.gemini', 'config', 'skills', 'slm-tiny-step'));
+    copySkillPackage(path.join(homeDir, '.gemini', 'config', '.agents', 'skills', 'slm-tiny-step'));
 
     // OpenCode Global
-    copySkillPackage(path.join(homeDir, '.config', 'opencode', 'skills', 'atomic-coding'));
-    copySkillPackage(path.join(homeDir, '.opencode', 'skills', 'atomic-coding'));
+    copySkillPackage(path.join(homeDir, '.config', 'opencode', 'skills', 'slm-tiny-step'));
+    copySkillPackage(path.join(homeDir, '.opencode', 'skills', 'slm-tiny-step'));
 
     // Claude Code & Codex Global
-    copySkillPackage(path.join(homeDir, '.claude', 'skills', 'atomic-coding'));
-    copySkillPackage(path.join(homeDir, '.codex', 'skills', 'atomic-coding'));
+    copySkillPackage(path.join(homeDir, '.claude', 'skills', 'slm-tiny-step'));
+    copySkillPackage(path.join(homeDir, '.codex', 'skills', 'slm-tiny-step'));
 
     // Global trigger rules for universal @ mention
-    registerRule(path.join(homeDir, '.gemini', 'config', '.agents', 'rules', 'atomic-coding.md'));
-    registerRule(path.join(homeDir, '.config', 'opencode', 'rules', 'atomic-coding.md'));
+    registerRule(path.join(homeDir, '.gemini', 'config', '.agents', 'rules', 'slm-tiny-step.md'));
+    registerRule(path.join(homeDir, '.config', 'opencode', 'rules', 'slm-tiny-step.md'));
   } else {
     const cwd = process.cwd();
     console.log(yellow(`>> Installing in FOLDER mode (${cwd})...`));
 
-    copySkillPackage(path.join(cwd, '.agents', 'skills', 'atomic-coding'));
-    copySkillPackage(path.join(cwd, '.agent', 'skills', 'atomic-coding'));
-    registerRule(path.join(cwd, '.agents', 'rules', 'atomic-coding.md'));
+    copySkillPackage(path.join(cwd, '.agents', 'skills', 'slm-tiny-step'));
+    copySkillPackage(path.join(cwd, '.agent', 'skills', 'slm-tiny-step'));
+    registerRule(path.join(cwd, '.agents', 'rules', 'slm-tiny-step.md'));
   }
 
   console.log('');
   console.log(cyan('   ====================================================='));
   console.log(green('   [OK] Installation completed successfully!'));
-  console.log(white('   How to invoke: Type @atomic-coding in chat or say:'));
-  console.log(yellow("   'Apply atomic-coding skill for this task'"));
+  console.log(white('   How to invoke: Type @slm-tiny-step in chat or say:'));
+  console.log(yellow("   'Apply slm-tiny-step skill for this task'"));
   console.log(cyan('   ====================================================='));
   console.log('');
 }

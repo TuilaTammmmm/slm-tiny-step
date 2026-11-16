@@ -1,12 +1,12 @@
 ---
-name: atomic-coding
+name: slm-tiny-step
 description: >-
   Enforces strict phase-based planning, context sharding, and ultra-small atomic task decomposition for coding tasks.
   Use whenever a coding task touches 2+ files, exceeds 30 lines of code, involves multi-step architecture/refactoring,
   or when running on small language models (SLMs like LFM-3) that require state-anchored execution via .atomic/ directory.
 ---
 
-# Atomic Coding: Sharded Planning & Micro-Step Execution
+# SLM Tiny Step: Sharded Planning & Micro-Step Execution
 
 A deterministic, token-efficient skill designed to eliminate context drift, hallucination, and incomplete code generation—especially for Small Language Models (SLMs like LFM-3) and multi-turn agent sessions.
 
