@@ -12,22 +12,19 @@ Khi lập trình với các mô hình ngôn ngữ nhỏ (SLM) như **LFM-3**, AI
 
 ---
 
-## ⚡ Cài đặt 1 lệnh duy nhất (Universal Install)
+## ⚡ Cài đặt 1 lệnh duy nhất (Không cần clone repo)
 
-Chạy trực tiếp từ terminal của bạn qua `npx`, `pnpm` hoặc `bun` (tự động chạy đa nền tảng trên cả Windows, macOS và Linux):
+Chạy trực tiếp từ terminal với `npx` (hoạt động ngay trên Windows, macOS và Linux):
 
 ```bash
-# Chạy trực tiếp từ GitHub qua npx (Không cần clone repo):
 npx github:TuilaTammmmm/slm-tiny-step
-
-# Hoặc khi đã publish lên npm:
-npx atomic-coding
+```
 
 ---
 
 ## 🖥️ Giao diện lựa chọn tương tác trong Terminal
 
-Khi chạy `npx atomic-coding`, menu tương tác sẽ xuất hiện:
+Khi chạy lệnh trên, menu tương tác sẽ xuất hiện:
 
 ```text
    =====================================================
@@ -46,7 +43,7 @@ Khi chạy `npx atomic-coding`, menu tương tác sẽ xuất hiện:
 - **[1] Global:** Cài đặt vào cấu hình hệ thống (`~/.gemini`, `~/.config/opencode`, `~/.claude`, `~/.codex`). Mọi dự án trên máy tính đều có thể gọi `@atomic-coding`.
 - **[2] Folder:** Cài đặt vào thư mục dự án hiện tại (`.agents/skills/atomic-coding` và `.agents/rules/`). Thích hợp để commit lên Git dùng chung cho cả team.
 
-*(Bạn có thể bỏ qua bước hỏi bằng cách truyền trực tiếp: `npx atomic-coding global` hoặc `npx atomic-coding folder`)*
+*(Bạn có thể bỏ qua bước hỏi bằng cách truyền trực tiếp: `npx github:TuilaTammmmm/slm-tiny-step global` hoặc `npx github:TuilaTammmmm/slm-tiny-step folder`)*
 
 ---
 

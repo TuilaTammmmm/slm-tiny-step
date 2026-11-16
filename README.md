@@ -12,22 +12,19 @@ When coding with Small Language Models (SLMs) such as **LFM-3**, agents often ex
 
 ---
 
-## ⚡ 1-Line Universal Installation
+## ⚡ 1-Line Universal Installation (No Clone Needed)
 
-Run directly in your terminal using `npx`, `pnpm`, or `bun` (works out of the box on Windows, macOS, and Linux):
+Run directly in your terminal with `npx` (works on Windows, macOS, and Linux):
 
 ```bash
-# Using npx directly from GitHub (No clone needed):
 npx github:TuilaTammmmm/slm-tiny-step
-
-# Or if published to npm registry:
-npx atomic-coding
+```
 
 ---
 
 ## 🖥️ Interactive Terminal Selection
 
-Upon running `npx atomic-coding`, an interactive menu appears in your terminal:
+Upon running the command, an interactive menu appears in your terminal:
 
 ```text
    =====================================================
@@ -46,7 +43,7 @@ Upon running `npx atomic-coding`, an interactive menu appears in your terminal:
 - **[1] Global:** Installs into system config directories (`~/.gemini`, `~/.config/opencode`, `~/.claude`, `~/.codex`). Every project on your machine can invoke `@atomic-coding`.
 - **[2] Folder:** Installs into the current directory (`.agents/skills/atomic-coding` and `.agents/rules/`). Perfect for committing to Git to share with your team.
 
-*(You can bypass the prompt with flags: `npx atomic-coding global` or `npx atomic-coding folder`)*
+*(You can bypass the prompt with flags: `npx github:TuilaTammmmm/slm-tiny-step global` or `npx github:TuilaTammmmm/slm-tiny-step folder`)*
 
 ---
 
