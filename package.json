@@ -1,0 +1,37 @@
+{
+  "name": "atomic-coding",
+  "version": "1.0.0",
+  "description": "Deterministic Planning, Context Sharding & Micro-Step Memory for AI Agents (Optimized for SLMs like LFM-3)",
+  "type": "module",
+  "main": "./bin/cli.js",
+  "bin": {
+    "atomic-coding": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "resources",
+    "references",
+    "examples",
+    "SKILL.md",
+    "README.md",
+    "README.vi.md"
+  ],
+  "keywords": [
+    "ai-agent",
+    "antigravity",
+    "opencode",
+    "codex",
+    "claude-code",
+    "cursor",
+    "lfm3",
+    "slm",
+    "atomic-coding",
+    "agent-skill"
+  ],
+  "author": "TuilaTam",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TuilaTammmmm/slm-tiny-step.git"
+  }
+}
